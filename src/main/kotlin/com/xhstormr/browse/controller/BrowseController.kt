@@ -64,9 +64,13 @@ class BrowseController {
     @PostMapping
     fun save(request: HttpServletRequest, @RequestPart file: MultipartFile): String {
         val path = request.servletPath.substring(1)
-        val dest = basePath.resolve(path).resolve(file.originalFilename)
+        var dest = basePath.resolve(path).resolve(file.originalFilename)
+        var i = 0
+        while (Files.exists(dest)) {
+            dest = dest.resolveSibling("${file.originalFilename}.${++i}")
+        }
         file.transferTo(dest.toFile())
-        return "redirect:/$path"
+        return "redirect:/${UriEncoder.encode(path)}"
     }
 
     @ExceptionHandler(Exception::class)

@@ -105,7 +105,10 @@
 
             <tr>
                 <td colspan="3">
-                    <div id="box" onclick="document.getElementById('uploadFile').click()">选择文件进行上传</div>
+                    <form id="form" action="./" method="post" enctype="multipart/form-data">
+                        <label for="uploadFile" id="box">选择文件进行上传</label>
+                        <input  id="uploadFile" name="file" type="file" style="display: none;" onchange="document.getElementById('form').submit()">
+                    </form>
                 </td>
             </tr>
 
@@ -113,9 +116,6 @@
         </table>
     </div>
 </main>
-<form id="form" action="./" method="post" enctype="multipart/form-data" style="display: none;">
-    <input id="uploadFile" name="file" type="file" onchange="document.getElementById('form').submit()">
-</form>
 <footer>
     © 2017 <a href="https://github.com/XhstormR">XhstormR</a>
 </footer>

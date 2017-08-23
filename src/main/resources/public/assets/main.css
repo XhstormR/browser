@@ -201,6 +201,7 @@ footer {
 }
 
 #box {
+    display: block;
     cursor: pointer;
     text-align: center;
     padding: 10px 0;
