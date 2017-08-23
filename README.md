@@ -5,7 +5,7 @@
 
 ## Run
 ```
-java -jar Browse-1.0-SNAPSHOT.jar
+java -jar browse.jar
 ```
 
 ## Configuration
@@ -14,5 +14,5 @@ java -jar Browse-1.0-SNAPSHOT.jar
 
 索引目录缺省为 `D:/Download/`，可以通过以下两种方式进行指定：
 
-* 命令行参数：`java -jar Browse-1.0-SNAPSHOT.jar --base_path=D:/Download/`
+* 命令行参数：`java -jar browse.jar --base_path=D:/Download/`
 * 配置文件&#8195;：`src/main/resources/config.properties` 文件中添加 `base_path=D:/Download/`
