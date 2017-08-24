@@ -4,18 +4,20 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: "Microsoft YaHei UI", serif;
     text-rendering: optimizespeed;
+    background: url("./main.jpg") no-repeat fixed;
 }
 
 a {
-    color: #006ed3;
+    color: #fff;
+    text-shadow: none;
     text-decoration: none;
 }
 
 a:hover,
 h1 a:hover {
-    color: #319cff;
+    color: orange;
 }
 
 header,
@@ -37,7 +39,7 @@ td:last-child {
 header {
     padding-top: 25px;
     padding-bottom: 15px;
-    background-color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 h1 {
@@ -46,16 +48,10 @@ h1 {
     white-space: nowrap;
     overflow-x: hidden;
     text-overflow: ellipsis;
-    color: #999;
 }
 
 h1 a {
-    color: #000;
     margin: 0 4px;
-}
-
-h1 a:hover {
-    text-decoration: underline;
 }
 
 h1 a:first-child {
@@ -68,7 +64,6 @@ main {
 
 .meta {
     font-size: 12px;
-    font-family: Verdana, sans-serif;
     border-bottom: 1px solid #9C9C9C;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -93,7 +88,7 @@ tr {
 }
 
 tbody tr:hover {
-    background-color: #ffffec;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 th,
@@ -107,10 +102,6 @@ th {
     padding-bottom: 15px;
     font-size: 16px;
     white-space: nowrap;
-}
-
-th a {
-    color: black;
 }
 
 th svg {
@@ -187,10 +178,6 @@ footer {
         text-align: right;
     }
 
-    h1 {
-        color: #000;
-    }
-
     h1 a {
         margin: 0;
     }
@@ -201,6 +188,7 @@ footer {
 }
 
 #box {
+    color: orange;
     display: block;
     cursor: pointer;
     text-align: center;
