@@ -207,6 +207,6 @@ footer {
     padding: 10px 0;
 }
 
-tbody tr:last-child td {
+tbody tr:last-child td[colspan="3"] {
     padding: 0 5%;
 }

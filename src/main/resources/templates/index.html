@@ -103,7 +103,7 @@
                 </th:block>
             </th:block>
 
-            <tr>
+            <tr th:if="${@enableUpload}">
                 <td colspan="3">
                     <form id="form" action="./" method="post" enctype="multipart/form-data">
                         <label for="uploadFile" id="box">选择文件进行上传</label>

@@ -2,7 +2,6 @@ package com.xhstormr.browse.controller
 
 import com.xhstormr.browse.entity.Breadcrumb
 import com.xhstormr.browse.entity.PathWrapper
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
@@ -19,9 +18,10 @@ import javax.servlet.http.HttpServletResponse
 
 @Controller
 @RequestMapping("/", "/{:^assets.+|(?!assets).*$}/**") //https://stackoverflow.com/questions/1240275/how-to-negate-specific-word-in-regex#3688210
-class BrowseController {
-    @Autowired
-    private lateinit var basePath: Path
+class BrowseController(
+        private val basePath: Path,
+        private val enableUpload: Boolean
+) {
 
     @GetMapping
     fun list(request: HttpServletRequest, response: HttpServletResponse, model: Model): String? {
@@ -63,6 +63,9 @@ class BrowseController {
 
     @PostMapping
     fun save(request: HttpServletRequest, @RequestPart file: MultipartFile): String {
+        if (!enableUpload) {
+            throw IllegalStateException()
+        }
         val path = request.servletPath.substring(1)
         var dest = basePath.resolve(path).resolve(file.originalFilename)
         var i = 0
