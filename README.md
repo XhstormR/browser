@@ -1,5 +1,5 @@
 # Browse
-![](https://i.loli.net/2017/08/24/599ecbf0167f0.png "Browse")
+![](https://i.loli.net/2017/08/25/599fcabc4815a.png "Browse")
 
 基于以下技术，实现了类似于 Nginx 的 autoindex 功能，能够 **索引本地文件**，但额外提供了 **文件上传功能** 和更加 **友好的界面**。
 

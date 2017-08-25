@@ -6,7 +6,7 @@
 body {
     font-family: "Microsoft YaHei UI", serif;
     text-rendering: optimizespeed;
-    background: url("./main.jpg") no-repeat fixed;
+    background: #3d778b url("./main.jpg") no-repeat fixed;
 }
 
 a {
@@ -197,4 +197,22 @@ footer {
 
 tbody tr:last-child td[colspan="3"] {
     padding: 0 5%;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 11px
+}
+
+::-webkit-scrollbar-thumb {
+    background: #969cbd
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff9632
 }

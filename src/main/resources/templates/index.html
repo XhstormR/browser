@@ -87,17 +87,18 @@
                     <!--/*@thymesVar id="temp" type="com.xhstormr.browse.entity.PathWrapper"*/-->
                     <tr class="file">
                         <td>
-                            <a th:switch="${path.isDir()}" th:href="${path.link()}">
+                            <a th:switch="${path.dir}" th:href="${path.link}">
                                 <svg th:case="true"  width="1.5em" height="1em" version="1.1" viewBox="0 0 317 259"><use xlink:href="#folder"></use></svg>
                                 <svg th:case="false" width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
-                                <span class="name" th:text="${path.name()}"></span>
+                                <span class="name" th:text="${path.name}"></span>
                             </a>
                         </td>
 
-                        <td th:text="${path.isDir() ? '&mdash;' : #numbers.formatDecimal(path.size(),1,'COMMA',1,'POINT')+' KB'}"></td>
+                        <!--/*<td th:text="${path.dir ? '&mdash;' : #numbers.formatDecimal(path.size/1024.0,1,'COMMA',1,'POINT')+' KB'}"></td>*/-->
+                        <td th:text="${path.dir ? '&mdash;' : path.formatSize()}"></td>
 
                         <td class="hideable">
-                            <time th:text="${#dates.format(path.date(),'yyyy-MM-dd HH:mm:ss')}"></time>
+                            <time th:text="${#dates.format(path.date,'yyyy-MM-dd HH:mm:ss')}"></time>
                         </td>
                     </tr>
                 </th:block>
