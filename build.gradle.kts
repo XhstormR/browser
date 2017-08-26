@@ -1,14 +1,16 @@
+import org.gradle.api.tasks.bundling.Jar
 import org.gradle.api.tasks.wrapper.Wrapper
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.springframework.boot.gradle.run.BootRunTask
 
 version = "1.0-SNAPSHOT"
 
 plugins {
+    idea
     application
 }
 
 apply {
-    plugin("java")
     plugin("kotlin")
     plugin("org.springframework.boot")
 }
@@ -18,10 +20,27 @@ task<Wrapper>("wrapper") {
     distributionType = Wrapper.DistributionType.ALL
 }
 
+tasks.withType<Jar> {
+    baseName = "browse"
+    version = ""
+}
+
 tasks.withType<KotlinCompile> {
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
+    kotlinOptions.jvmTarget = "1.8"
+}
+
+//应用于 bootRun
+tasks.withType<BootRunTask> {
+    addResources = true
+    jvmArgs = listOf("-Dconfig.enable_upload=true")
+}
+
+//应用于 run
+application {
+    mainClassName = "com.xhstormr.browse.Application"
+    applicationDefaultJvmArgs = listOf(
+            "-Dspring.profiles.active=dev",
+            "-Dconfig.enable_upload=true")
 }
 
 java {
@@ -51,7 +70,7 @@ repositories {
 }
 
 dependencies {
-    compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:${extra["kotlin_version"]}")
+    compile("org.jetbrains.kotlin:kotlin-stdlib-jre8")
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
     compile("org.springframework.boot:spring-boot-devtools")
 }
