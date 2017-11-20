@@ -7,12 +7,12 @@ version = "1.0-SNAPSHOT"
 plugins {
     idea
     application
-    kotlin("jvm")
-    id("org.springframework.boot") version ("1.5.7.RELEASE")
+    kotlin("jvm") version "1.1.60"
+    id("org.springframework.boot") version "1.5.8.RELEASE"
 }
 
 task<Wrapper>("wrapper") {
-    gradleVersion = "4.2"
+    gradleVersion = "4.3"
     distributionType = Wrapper.DistributionType.ALL
 }
 
