@@ -237,9 +237,9 @@ tbody tr td:nth-child(1) a {
     background: #fff;
     font-size: 15px;
     padding: 10px;
-    margin-top: 25px;
+    margin-top: 30px;
     transition: all 0.3s ease-out;
-    box-shadow: 6px 6px 12px 0px rgba(7,17,27,.2);
+    box-shadow: 6px 6px 12px 0 rgba(7, 17, 27, .2);
 }
 
 .login_container input[type=text], .login_container input[type=password] {
@@ -258,5 +258,5 @@ tbody tr td:nth-child(1) a {
 }
 
 .login_container input:hover, .login_container input:focus {
-    box-shadow: 15px 15px 20px 0px rgba(7,17,27,.2);
+    box-shadow: 15px 15px 20px 0 rgba(7, 17, 27, .2);
 }

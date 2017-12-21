@@ -1,18 +1,38 @@
-import org.gradle.api.tasks.bundling.Jar
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.springframework.boot.gradle.run.BootRunTask
+
+buildscript {
+    repositories {
+        maven("http://maven.aliyun.com/nexus/content/groups/public/")
+    }
+
+    dependencies {
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${extra["kotlin_version"]}")
+    }
+}
+
+repositories {
+    maven("http://maven.aliyun.com/nexus/content/groups/public/")
+}
+
+dependencies {
+    compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+    compile("org.springframework.boot:spring-boot-devtools")
+}
 
 version = "1.0-SNAPSHOT"
 
 plugins {
     idea
     application
-    kotlin("jvm") version "1.1.60"
-    id("org.springframework.boot") version "1.5.8.RELEASE"
+    kotlin("jvm") version "1.2.10"
+    id("org.springframework.boot") version "1.5.9.RELEASE"
 }
 
 task<Wrapper>("wrapper") {
-    gradleVersion = "4.3"
+    gradleVersion = "4.4.1"
     distributionType = Wrapper.DistributionType.ALL
 }
 
@@ -42,25 +62,4 @@ application {
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
-}
-
-buildscript {
-    repositories {
-        maven("http://maven.aliyun.com/nexus/content/groups/public/")
-    }
-
-    dependencies {
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${extra["kotlin_version"]}")
-    }
-}
-
-repositories {
-    maven("http://maven.aliyun.com/nexus/content/groups/public/")
-}
-
-dependencies {
-    compile("org.jetbrains.kotlin:kotlin-stdlib-jre8")
-    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
-    compile("org.springframework.boot:spring-boot-starter-actuator")
-    compile("org.springframework.boot:spring-boot-devtools")
 }
