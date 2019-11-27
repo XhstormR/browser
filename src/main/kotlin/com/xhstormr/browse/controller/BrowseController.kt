@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*
 import org.springframework.web.multipart.MultipartFile
 import org.yaml.snakeyaml.util.UriEncoder
 import java.io.FileNotFoundException
+import java.nio.charset.Charset
 import java.nio.file.Files
 import java.nio.file.Path
 import java.util.stream.Collectors
@@ -52,7 +53,7 @@ class BrowseController(
             }
             Files.isRegularFile(file) -> {
                 response.contentType = MimeTypeUtils.APPLICATION_OCTET_STREAM_VALUE
-                response.setHeader("Content-Disposition", "attachment; filename=${UriEncoder.encode(file.fileName.toString())}")
+                response.setHeader("Content-Disposition", "attachment; filename=${file.fileName.toString().toByteArray().toString(Charset.forName("ISO-8859-1"))}")
                 Files.copy(file, response.outputStream)
                 return null
             }

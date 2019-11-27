@@ -9,7 +9,7 @@ class LoginInterceptor : HandlerInterceptorAdapter() {
             if (request.session.getAttribute("isLogin") == true) {
                 true
             } else {
-                response.sendRedirect("/login")
+                response.sendRedirect(request.contextPath + "/login")
                 false
             }
 }
