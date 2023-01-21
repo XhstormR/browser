@@ -1,0 +1,34 @@
+[versions]
+latest = "+"
+gradle = "7.6"
+ktor = "2.2.2"
+kotlin = "1.8.0"
+ktlint = "11.0.0"
+
+[libraries]
+
+ktor-server-auth = { module = "io.ktor:ktor-server-auth", version.ref = "ktor" }
+ktor-server-netty = { module = "io.ktor:ktor-server-netty", version.ref = "ktor" }
+ktor-server-config-yaml = { module = "io.ktor:ktor-server-config-yaml", version.ref = "ktor" }
+ktor-server-html-builder = { module = "io.ktor:ktor-server-html-builder", version.ref = "ktor" }
+ktor-server-status-pages = { module = "io.ktor:ktor-server-status-pages", version.ref = "ktor" }
+ktor-server-call-logging = { module = "io.ktor:ktor-server-call-logging", version.ref = "ktor" }
+ktor-server-partial-content = { module = "io.ktor:ktor-server-partial-content", version.ref = "ktor" }
+ktor-server-auto-head-response = { module = "io.ktor:ktor-server-auto-head-response", version.ref = "ktor" }
+
+logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "latest" }
+
+[bundles]
+ktor = [
+    "ktor-server-auth",
+    "ktor-server-netty",
+    "ktor-server-config-yaml",
+    "ktor-server-html-builder",
+    "ktor-server-status-pages",
+    "ktor-server-call-logging",
+    "ktor-server-partial-content",
+    "ktor-server-auto-head-response",
+]
+
+[plugins]
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }

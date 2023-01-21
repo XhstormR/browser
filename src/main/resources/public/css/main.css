@@ -6,7 +6,7 @@
 body {
     font-family: "Microsoft YaHei UI", serif;
     text-rendering: optimizespeed;
-    background: #3d778b url("./main.jpg") no-repeat fixed;
+    background: #3d778b url("../images/main.jpg") no-repeat fixed;
 }
 
 a {

@@ -1,0 +1,14 @@
+ktor:
+    deployment:
+        port: "$PORT:8080"
+    application:
+        modules:
+            - com.xhstormr.browser.ApplicationKt.module
+
+security:
+    username: "admin"
+    password: "123456"
+
+resource:
+    location: "/Users/user/Downloads"
+    enable-upload: true
