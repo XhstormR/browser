@@ -4,12 +4,13 @@ import java.nio.file.Path
 import java.text.NumberFormat
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
+import kotlin.io.path.extension
 import kotlin.io.path.fileSize
 import kotlin.io.path.getLastModifiedTime
 import kotlin.io.path.isDirectory
 import kotlin.io.path.name
 
-data class PathWrapper(val path: Path) {
+data class PathWrapper(val path: Path) : Comparable<PathWrapper> {
 
     val isDir = path.isDirectory()
 
@@ -56,4 +57,7 @@ data class PathWrapper(val path: Path) {
         }
         return "${numberFormat.format(size * 1.0 / divisor)} $unit"
     }
+
+    override fun compareTo(other: PathWrapper) =
+        compareValuesBy(other, this, { it.isDir }, { it.path.extension }, { it.name })
 }

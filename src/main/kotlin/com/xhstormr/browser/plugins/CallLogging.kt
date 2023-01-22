@@ -8,6 +8,7 @@ import org.slf4j.event.Level
 fun Application.configureCallLogging() {
     install(CallLogging) {
         level = Level.INFO
+        filter { call -> !call.parameters.contains("static-content-path-parameter") }
         // format { call ->
         //     val status = call.response.status()
         //     val httpMethod = call.request.httpMethod.value

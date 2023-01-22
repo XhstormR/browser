@@ -80,7 +80,7 @@ fun Application.configureRouting(config: ApplicationConfig) {
 
                             val paths = path.listDirectoryEntries()
                                 .map { PathWrapper(it) }
-                                .sortedByDescending { it.isDir }
+                                .sorted()
 
                             val block = createHTML(key, enableUpload, paths, breadcrumbs)
                             call.respondHtml(block = block)
