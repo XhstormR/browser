@@ -24,7 +24,7 @@ java -jar browser-2.0-SNAPSHOT.jar -P:resource.location=/Users/user/Downloads
 
 ## Configuration
 
-使用 `-P` 标志设置命令行参数。
+使用 `-P:` 标志设置命令行参数。
 
 * `security.username`: 登录用户，默认 `admin`
 * `security.password`: 登录密码，默认 `123456`

@@ -75,7 +75,7 @@ fun Application.configureRouting(config: ApplicationConfig) {
 
                     when {
                         path.isDirectory() -> {
-                            call.application.log.info("list: {}", path)
+                            call.application.log.info("list: {}", path.toUri())
                             val breadcrumbs = breadcrumbs(key)
 
                             val paths = path.listDirectoryEntries()
@@ -87,7 +87,7 @@ fun Application.configureRouting(config: ApplicationConfig) {
                         }
 
                         path.isRegularFile() -> {
-                            call.application.log.info("download: {}", path)
+                            call.application.log.info("download: {}", path.toUri())
                             call.response.header(HttpHeaders.ContentDisposition, attachmentHeaders(path.name))
                             call.respondFile(path.toFile())
                         }
@@ -110,7 +110,7 @@ fun Application.configureRouting(config: ApplicationConfig) {
                             while (dest.exists()) {
                                 dest = dest.resolveSibling("${part.originalFileName}.${++i}")
                             }
-                            call.application.log.info("upload: {}", dest)
+                            call.application.log.info("upload: {}", dest.toUri())
                             Files.copy(part.streamProvider(), dest)
                         }
                         part.dispose()
