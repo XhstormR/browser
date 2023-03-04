@@ -1,9 +1,9 @@
 [versions]
 latest = "+"
-gradle = "7.6"
-ktor = "2.2.2"
-kotlin = "1.8.0"
-ktlint = "11.0.0"
+gradle = "8.0.2"
+ktor = "2.2.4"
+kotlin = "1.8.10"
+ktlint = "11.3.1"
 
 [libraries]
 

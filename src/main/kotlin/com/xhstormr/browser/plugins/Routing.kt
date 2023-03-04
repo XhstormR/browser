@@ -4,6 +4,7 @@ import com.xhstormr.browser.attachmentHeaders
 import com.xhstormr.browser.models.PathWrapper
 import com.xhstormr.browser.models.breadcrumbs
 import com.xhstormr.browser.models.createHTML
+import com.xhstormr.browser.sanitizePath
 import io.ktor.http.HttpHeaders
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.content.PartData
@@ -34,7 +35,6 @@ import io.ktor.server.routing.routing
 import io.ktor.server.sessions.clear
 import io.ktor.server.sessions.sessions
 import io.ktor.server.sessions.set
-import io.ktor.util.normalizeAndRelativize
 import java.nio.file.Files
 import kotlin.io.path.Path
 import kotlin.io.path.exists
@@ -70,7 +70,7 @@ fun Application.configureRouting(config: ApplicationConfig) {
 
             route("/browser") {
                 get {
-                    val key = (call.parameters["key"] ?: "/").let { Path(it).normalizeAndRelativize() }
+                    val key = sanitizePath(call.parameters["key"])
                     val path = location.resolve(key)
 
                     when {
@@ -100,7 +100,7 @@ fun Application.configureRouting(config: ApplicationConfig) {
                 post {
                     if (!enableUpload) call.respond(HttpStatusCode.BadRequest)
 
-                    val key = (call.parameters["key"] ?: "/").let { Path(it).normalizeAndRelativize() }
+                    val key = sanitizePath(call.parameters["key"])
                     val path = location.resolve(key)
 
                     call.receiveMultipart().forEachPart { part ->
