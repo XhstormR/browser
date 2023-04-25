@@ -23,9 +23,6 @@ fun Application.configureAuthentication(config: ApplicationConfig) {
             challenge("/login.html")
         }
 
-        session<UserIdPrincipal>("auth-session") {
-            validate { session -> session }
-            challenge("/login.html")
-        }
+        session<UserIdPrincipal>("auth-session")
     }
 }

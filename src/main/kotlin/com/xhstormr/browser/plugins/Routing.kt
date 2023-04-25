@@ -18,10 +18,7 @@ import io.ktor.server.auth.authenticate
 import io.ktor.server.auth.principal
 import io.ktor.server.config.ApplicationConfig
 import io.ktor.server.html.respondHtml
-import io.ktor.server.http.content.defaultResource
-import io.ktor.server.http.content.resources
-import io.ktor.server.http.content.static
-import io.ktor.server.http.content.staticBasePackage
+import io.ktor.server.http.content.staticResources
 import io.ktor.server.request.receiveMultipart
 import io.ktor.server.request.uri
 import io.ktor.server.response.header
@@ -49,11 +46,7 @@ fun Application.configureRouting(config: ApplicationConfig) {
     val enableUpload = config.property("resource.enable-upload").getString().toBoolean()
 
     routing {
-        static {
-            staticBasePackage = "public"
-            resources(".")
-            defaultResource("login.html")
-        }
+        staticResources("/", "public", "login.html")
 
         authenticate("auth-form") {
             post("/login") {

@@ -6,7 +6,7 @@ import kotlin.io.path.Path
 
 fun attachmentHeaders(fileName: String) = ContentDisposition.Attachment
     .withParameter(ContentDisposition.Parameters.FileName, fileName)
-    .withParameter(ContentDisposition.Parameters.FileNameAsterisk, fileName.toByteArray().toString(Charsets.ISO_8859_1))
+    .withParameter(ContentDisposition.Parameters.FileNameAsterisk, fileName)
     .toString()
 
 fun sanitizePath(key: String?) = Path(key ?: "/").normalizeAndRelativize()
