@@ -14,6 +14,7 @@ ktor-server-html-builder = { module = "io.ktor:ktor-server-html-builder", versio
 ktor-server-status-pages = { module = "io.ktor:ktor-server-status-pages", version.ref = "ktor" }
 ktor-server-call-logging = { module = "io.ktor:ktor-server-call-logging", version.ref = "ktor" }
 ktor-server-partial-content = { module = "io.ktor:ktor-server-partial-content", version.ref = "ktor" }
+ktor-server-forwarded-header = { module = "io.ktor:ktor-server-forwarded-header", version.ref = "ktor" }
 ktor-server-auto-head-response = { module = "io.ktor:ktor-server-auto-head-response", version.ref = "ktor" }
 
 logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "latest" }
@@ -27,6 +28,7 @@ ktor = [
     "ktor-server-status-pages",
     "ktor-server-call-logging",
     "ktor-server-partial-content",
+    "ktor-server-forwarded-header",
     "ktor-server-auto-head-response",
 ]
 

@@ -11,11 +11,11 @@ fun Application.configureCallLogging() {
         disableForStaticContent()
         // format { call ->
         //     val status = call.response.status()
-        //     val httpMethod = call.request.httpMethod.value
+        //     val method = call.request.httpMethod.value
         //     val path = call.request.path()
-        //     val remoteAddress = call.request.local.remoteAddress
-        //     val remotePort = call.request.local.remotePort
-        //     "[$httpMethod $path, $status, client=/$remoteAddress:$remotePort]"
+        //     val remoteHost = call.request.origin.remoteHost
+        //     val remotePort = call.request.origin.remotePort
+        //     "[$status, $method $path, client=/$remoteHost:$remotePort]"
         // }
     }
 }
