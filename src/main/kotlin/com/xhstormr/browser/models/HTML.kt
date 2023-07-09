@@ -44,7 +44,6 @@ fun createHTML(
         styleLink("/css/main.css")
     }
     body {
-        unsafe { raw(SVG) }
         header {
             h1 {
                 a(BASE_HREF) { text("/") }
@@ -133,21 +132,7 @@ fun createHTML(
 
 private const val BASE_HREF = "/browser?key=/"
 
-private const val SVG = """
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" height="0" width="0" style="position: absolute;">
-    <defs>
-        <g id="folder" fill="none">
-            <path d="M285.22 37.55h-142.6L110.9 0H31.7C14.25 0 0 16.9 0 37.55v75.1h316.92V75.1c0-20.65-14.26-37.55-31.7-37.55z" fill="#FFA000"></path>
-            <path d="M285.22 36H31.7C14.25 36 0 50.28 0 67.74v158.7c0 17.47 14.26 31.75 31.7 31.75H285.2c17.44 0 31.7-14.3 31.7-31.75V67.75c0-17.47-14.26-31.75-31.7-31.75z" fill="#FFCA28"></path>
-        </g>
-        <g id="file" stroke="#000" stroke-width="25" fill="#FFF" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M13 24.12v274.76c0 6.16 5.87 11.12 13.17 11.12H239c7.3 0 13.17-4.96 13.17-11.12V136.15S132.6 13 128.37 13H26.17C18.87 13 13 17.96 13 24.12z"></path>
-            <path d="M129.37 13L129 113.9c0 10.58 7.26 19.1 16.27 19.1H249L129.37 13z"></path>
-        </g>
-    </defs>
-</svg>
-"""
 private const val SVG_DIR =
-    """<svg width="1.5em" height="1em" viewBox="0 0 317 259"><use xlink:href="#folder"></use></svg>"""
+    """<svg width="1.5em" height="1em" viewBox="0 0 317 259"><use xlink:href="/images/main.svg#folder"></use></svg>"""
 private const val SVG_FILE =
-    """<svg width="1.5em" height="1em" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>"""
+    """<svg width="1.5em" height="1em" viewBox="0 0 265 323"><use xlink:href="/images/main.svg#file"></use></svg>"""

@@ -12,7 +12,7 @@ plugins {
 
 application {
     applicationName = project.name
-    mainClass.set("com.xhstormr.browser.ApplicationKt")
+    mainClass = "com.xhstormr.browser.ApplicationKt"
 }
 
 dependencies {
