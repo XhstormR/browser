@@ -1,21 +1,21 @@
 [versions]
 latest = "+"
-gradle = "8.2"
-kotlin = "1.9.0"
-ktlint = "11.5.0"
-ktor = "2.3.2"
+gradle = "8.3"
+kotlin = "1.9.10"
+ktlint = "11.5.1"
+ktor = "2.3.3"
 
 [libraries]
 
-ktor-server-auth = { module = "io.ktor:ktor-server-auth", version.ref = "ktor" }
-ktor-server-netty = { module = "io.ktor:ktor-server-netty", version.ref = "ktor" }
-ktor-server-config-yaml = { module = "io.ktor:ktor-server-config-yaml", version.ref = "ktor" }
-ktor-server-html-builder = { module = "io.ktor:ktor-server-html-builder", version.ref = "ktor" }
-ktor-server-status-pages = { module = "io.ktor:ktor-server-status-pages", version.ref = "ktor" }
-ktor-server-call-logging = { module = "io.ktor:ktor-server-call-logging", version.ref = "ktor" }
-ktor-server-partial-content = { module = "io.ktor:ktor-server-partial-content", version.ref = "ktor" }
-ktor-server-forwarded-header = { module = "io.ktor:ktor-server-forwarded-header", version.ref = "ktor" }
-ktor-server-auto-head-response = { module = "io.ktor:ktor-server-auto-head-response", version.ref = "ktor" }
+ktor-server-auth = { module = "io.ktor:ktor-server-auth" }
+ktor-server-netty = { module = "io.ktor:ktor-server-netty" }
+ktor-server-config-yaml = { module = "io.ktor:ktor-server-config-yaml" }
+ktor-server-html-builder = { module = "io.ktor:ktor-server-html-builder" }
+ktor-server-status-pages = { module = "io.ktor:ktor-server-status-pages" }
+ktor-server-call-logging = { module = "io.ktor:ktor-server-call-logging" }
+ktor-server-partial-content = { module = "io.ktor:ktor-server-partial-content" }
+ktor-server-forwarded-header = { module = "io.ktor:ktor-server-forwarded-header" }
+ktor-server-auto-head-response = { module = "io.ktor:ktor-server-auto-head-response" }
 
 logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "latest" }
 
@@ -34,3 +34,4 @@ ktor = [
 
 [plugins]
 ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
+ktor = { id = "io.ktor.plugin", version.ref = "ktor" }

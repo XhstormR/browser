@@ -1,4 +1,3 @@
-
 # Created by https://www.toptal.com/developers/gitignore/api/gradle,windows,macos,java,jetbrains+all
 # Edit at https://www.toptal.com/developers/gitignore?templates=gradle,windows,macos,java,jetbrains+all
 
@@ -196,5 +195,9 @@ gradle-app.setting
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+
+### Gradle Patch ###
+# Java heap dump
+*.hprof
 
 # End of https://www.toptal.com/developers/gitignore/api/gradle,windows,macos,java,jetbrains+all

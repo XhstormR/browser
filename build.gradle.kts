@@ -8,6 +8,7 @@ plugins {
     val kotlinVersion = libs.versions.kotlin
     kotlin("jvm") version kotlinVersion
     alias(libs.plugins.ktlint)
+    alias(libs.plugins.ktor)
 }
 
 application {
@@ -26,12 +27,6 @@ kotlin {
 }
 
 tasks {
-    withType<Jar> {
-        manifest.attributes["Main-Class"] = application.mainClass
-        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-        from(configurations.runtimeClasspath.get().map { zipTree(it) })
-    }
-
     withType<Test> {
         useJUnitPlatform()
     }
