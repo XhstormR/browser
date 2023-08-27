@@ -7,8 +7,9 @@ plugins {
     application
     val kotlinVersion = libs.versions.kotlin
     kotlin("jvm") version kotlinVersion
-    alias(libs.plugins.ktlint)
     alias(libs.plugins.ktor)
+    alias(libs.plugins.ktlint)
+    alias(libs.plugins.native)
 }
 
 application {
@@ -16,14 +17,20 @@ application {
     mainClass = "com.xhstormr.browser.ApplicationKt"
 }
 
+graalvmNative {
+    metadataRepository {
+        enabled = true
+    }
+
+    binaries.all {
+        resources.autodetect()
+    }
+}
+
 dependencies {
     implementation(libs.bundles.ktor)
 
     implementation(libs.logback.classic)
-}
-
-kotlin {
-    jvmToolchain(11)
 }
 
 tasks {
@@ -50,3 +57,9 @@ tasks {
         distributionType = Wrapper.DistributionType.ALL
     }
 }
+
+/*
+./gradlew -Pagent run &
+./gradlew metadataCopy --task run/session-385-20230827T144641Z --dir src/main/resources/META-INF/native-image
+./gradlew nativeCompile
+*/

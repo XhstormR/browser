@@ -8,7 +8,7 @@ import com.xhstormr.browser.plugins.configureRouting
 import com.xhstormr.browser.plugins.configureSessions
 import com.xhstormr.browser.plugins.configureStatusPages
 import io.ktor.server.application.Application
-import io.ktor.server.netty.EngineMain
+import io.ktor.server.cio.EngineMain
 
 fun main(args: Array<String>) = EngineMain.main(args)
 

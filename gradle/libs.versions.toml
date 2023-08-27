@@ -2,13 +2,14 @@
 latest = "+"
 gradle = "8.3"
 kotlin = "1.9.10"
+native = "0.9.24"
 ktlint = "11.5.1"
 ktor = "2.3.3"
 
 [libraries]
 
+ktor-server-cio = { module = "io.ktor:ktor-server-cio" }
 ktor-server-auth = { module = "io.ktor:ktor-server-auth" }
-ktor-server-netty = { module = "io.ktor:ktor-server-netty" }
 ktor-server-config-yaml = { module = "io.ktor:ktor-server-config-yaml" }
 ktor-server-html-builder = { module = "io.ktor:ktor-server-html-builder" }
 ktor-server-status-pages = { module = "io.ktor:ktor-server-status-pages" }
@@ -21,8 +22,8 @@ logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "la
 
 [bundles]
 ktor = [
+    "ktor-server-cio",
     "ktor-server-auth",
-    "ktor-server-netty",
     "ktor-server-config-yaml",
     "ktor-server-html-builder",
     "ktor-server-status-pages",
@@ -33,5 +34,6 @@ ktor = [
 ]
 
 [plugins]
-ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
 ktor = { id = "io.ktor.plugin", version.ref = "ktor" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
+native = { id = "org.graalvm.buildtools.native", version.ref = "native" }
