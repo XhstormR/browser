@@ -31,13 +31,20 @@ import kotlinx.html.tr
 import kotlinx.html.unsafe
 import java.nio.file.Path
 import kotlin.collections.set
+import kotlin.io.path.listDirectoryEntries
+import kotlin.io.path.name
+import kotlin.io.path.pathString
 
-fun createHTML(
+fun HTML.createBrowserHtml(
     key: Path,
+    path: Path,
     enableUpload: Boolean,
-    paths: List<PathWrapper>,
-    breadcrumbs: List<Breadcrumb>,
-): HTML.() -> Unit = {
+) {
+    val breadcrumbs = breadcrumbs(key)
+    val items = path.listDirectoryEntries()
+        .map { PathWrapper(it) }
+        .sorted()
+
     head {
         meta("viewport", "width=device-width, initial-scale=1.0", "utf-8")
         title(breadcrumbs.lastOrNull()?.text ?: "/")
@@ -57,8 +64,8 @@ fun createHTML(
             div("meta") {
                 div {
                     id = "summary"
-                    span("meta-item") { text(paths.count { it.isDir }.toString() + " directory") }
-                    span("meta-item") { text(paths.count { !it.isDir }.toString() + " file") }
+                    span("meta-item") { text(items.count { it.isDir }.toString() + " directory") }
+                    span("meta-item") { text(items.count { !it.isDir }.toString() + " file") }
                     span("meta-item") {
                         input {
                             id = "filter"
@@ -85,7 +92,7 @@ fun createHTML(
                                 td("hideable") { text("—") }
                             }
                         }
-                        paths.forEach {
+                        items.forEach {
                             tr("file") {
                                 td {
                                     a(BASE_HREF + key.resolve(it.name)) {
@@ -93,8 +100,8 @@ fun createHTML(
                                         span("name") { text(it.name) }
                                     }
                                 }
-                                td { text(if (it.isDir) "—" else it.formatSize()) }
-                                td("hideable") { text(it.formatTime()) }
+                                td { text(if (it.isDir) "—" else it.sizeFormatted) }
+                                td("hideable") { text(it.timeFormatted) }
                             }
                         }
                         if (enableUpload) {
@@ -128,6 +135,18 @@ fun createHTML(
         }
         script { src = "/js/main.js" }
     }
+}
+
+fun breadcrumbs(key: Path): List<Breadcrumb> {
+    if (key.name.isEmpty()) return listOf()
+
+    val list = mutableListOf<Breadcrumb>()
+    var parent = key
+    while (true) {
+        list.add(Breadcrumb(parent.pathString, parent.name))
+        parent = parent.parent ?: break
+    }
+    return list.reversed()
 }
 
 private const val BASE_HREF = "/browser?key=/"

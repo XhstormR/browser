@@ -1,13 +1,12 @@
 [versions]
 latest = "+"
-gradle = "8.3"
-kotlin = "1.9.10"
-native = "0.9.24"
-ktlint = "11.5.1"
-ktor = "2.3.3"
+gradle = "8.13"
+kotlin = "2.1.10"
+ktlint = "12.2.0"
+ktor = "3.1.1"
+native = "0.10.5"
 
 [libraries]
-
 ktor-server-cio = { module = "io.ktor:ktor-server-cio" }
 ktor-server-auth = { module = "io.ktor:ktor-server-auth" }
 ktor-server-config-yaml = { module = "io.ktor:ktor-server-config-yaml" }

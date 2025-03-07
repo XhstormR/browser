@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+    <meta charset="utf-8" content="width=device-width, initial-scale=1.0" name="viewport">
     <title>欢迎登录</title>
-    <link rel="icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/css/main.css">
+    <link href="/favicon.ico" rel="icon">
+    <link href="/css/main.css" rel="stylesheet">
 </head>
 
 <body>
 <main class="login_container">
     <form action="/login" method="post">
-        <input type="text" name="user" placeholder="账号" autofocus>
-        <input type="password" name="password" placeholder="密码">
+        <input autofocus name="user" placeholder="账号" type="text">
+        <input name="password" placeholder="密码" type="password">
         <input type="submit" value="登录">
     </form>
     <footer>
         © 2023 <a href="https://github.com/XhstormR/browser">XhstormR</a>
     </footer>
 </main>
+<script>
+    fetch('/browser', {method: 'HEAD'})
+        .then(response => {
+            if (response.status === 200) window.location.href = '/browser'
+        })
+        .catch(error => console.error('Error fetching browser page:', error));
+</script>
 </body>
 </html>
