@@ -7,6 +7,7 @@ plugins {
     application
     val kotlinVersion = libs.versions.kotlin
     kotlin("jvm") version kotlinVersion
+    kotlin("plugin.serialization") version kotlinVersion
     alias(libs.plugins.ktor)
     alias(libs.plugins.ktlint)
     alias(libs.plugins.native)
@@ -39,7 +40,7 @@ tasks {
     }
 
     withType<KotlinCompile> {
-        kotlinOptions {
+        compilerOptions {
             freeCompilerArgs = listOf("-Xjsr305=strict", "-Xjvm-default=all")
         }
     }
