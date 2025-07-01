@@ -11,4 +11,4 @@ security:
 
 resource:
     location: "/Users/user/Downloads"
-    enable-upload: true
+    enableUpload: true

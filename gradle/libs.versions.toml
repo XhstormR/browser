@@ -1,10 +1,10 @@
 [versions]
 latest = "+"
-gradle = "8.13"
-kotlin = "2.1.10"
-ktlint = "12.2.0"
-ktor = "3.1.1"
-native = "0.10.5"
+gradle = "8.14"
+kotlin = "2.2.0"
+ktlint = "12.3.0"
+ktor = "3.2.0"
+native = "0.10.6"
 
 [libraries]
 ktor-server-cio = { module = "io.ktor:ktor-server-cio" }

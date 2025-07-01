@@ -1,5 +1,6 @@
 package com.xhstormr.browser.plugins
 
+import com.xhstormr.browser.models.SecurityConfig
 import com.xhstormr.browser.models.UserSession
 import io.ktor.server.application.Application
 import io.ktor.server.application.install
@@ -7,12 +8,11 @@ import io.ktor.server.auth.Authentication
 import io.ktor.server.auth.UserPasswordCredential
 import io.ktor.server.auth.form
 import io.ktor.server.auth.session
-import io.ktor.server.config.ApplicationConfig
+import io.ktor.server.config.property
 import java.time.Instant
 
-fun Application.configureAuthentication(config: ApplicationConfig) {
-    val username = config.property("security.username").getString()
-    val password = config.property("security.password").getString()
+fun Application.configureAuthentication() {
+    val (username, password) = property<SecurityConfig>("security")
     val credential = UserPasswordCredential(username, password)
 
     install(Authentication) {

@@ -13,11 +13,11 @@ import io.ktor.server.cio.EngineMain
 fun main(args: Array<String>) = EngineMain.main(args)
 
 fun Application.module() {
-    configureAuthentication(environment.config)
+    configureAuthentication()
     configureAttachment()
     configureForwardedHeaders()
     configureStatusPages()
     configureCallLogging()
     configureSessions()
-    configureRouting(environment.config)
+    configureRouting()
 }

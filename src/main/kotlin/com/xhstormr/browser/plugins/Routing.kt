@@ -1,6 +1,7 @@
 package com.xhstormr.browser.plugins
 
 import com.xhstormr.browser.attachmentHeaders
+import com.xhstormr.browser.models.ResourceConfig
 import com.xhstormr.browser.models.UserSession
 import com.xhstormr.browser.models.createBrowserHtml
 import com.xhstormr.browser.sanitizePath
@@ -12,7 +13,7 @@ import io.ktor.server.application.Application
 import io.ktor.server.application.log
 import io.ktor.server.auth.authenticate
 import io.ktor.server.auth.principal
-import io.ktor.server.config.ApplicationConfig
+import io.ktor.server.config.property
 import io.ktor.server.html.respondHtml
 import io.ktor.server.http.content.staticResources
 import io.ktor.server.request.receiveMultipart
@@ -38,9 +39,10 @@ import kotlin.io.path.name
 import kotlin.io.path.notExists
 import kotlin.io.path.outputStream
 
-fun Application.configureRouting(config: ApplicationConfig) {
-    val location = config.property("resource.location").getString().let { Path(it) }
-    val enableUpload = config.property("resource.enable-upload").getString().toBoolean()
+fun Application.configureRouting() {
+    val resourceConfig = property<ResourceConfig>("resource")
+    val location = Path(resourceConfig.location)
+    val enableUpload = resourceConfig.enableUpload
 
     routing {
         staticResources("/", "public", "login.html")
