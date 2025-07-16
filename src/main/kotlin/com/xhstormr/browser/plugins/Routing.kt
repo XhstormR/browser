@@ -44,6 +44,8 @@ fun Application.configureRouting() {
     val location = Path(resourceConfig.location)
     val enableUpload = resourceConfig.enableUpload
 
+    log.info("List Directory: {}", location.toRealPath().toUri())
+
     routing {
         staticResources("/", "public", "login.html")
 
@@ -67,12 +69,12 @@ fun Application.configureRouting() {
 
                     when {
                         path.isDirectory() -> {
-                            call.application.log.info("list: {}", path.toUri())
+                            log.info("list: {}", path.toUri())
                             call.respondHtml { createBrowserHtml(key, path, enableUpload) }
                         }
 
                         path.isRegularFile() -> {
-                            call.application.log.info("download: {}", path.toUri())
+                            log.info("download: {}", path.toUri())
                             call.response.header(HttpHeaders.ContentDisposition, attachmentHeaders(path.name))
                             call.respondPath(path)
                         }
@@ -95,7 +97,7 @@ fun Application.configureRouting() {
                             while (dest.exists()) {
                                 dest = dest.resolveSibling("${part.originalFileName}.${++i}")
                             }
-                            call.application.log.info("upload: {}", dest.toUri())
+                            log.info("upload: {}", dest.toUri())
                             part.provider().copyAndClose(dest.outputStream().asByteWriteChannel())
                         }
                         part.dispose()

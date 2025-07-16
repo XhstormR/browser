@@ -10,5 +10,5 @@ security:
     password: "123456"
 
 resource:
-    location: "/Users/user/Downloads"
+    location: "."
     enableUpload: true
