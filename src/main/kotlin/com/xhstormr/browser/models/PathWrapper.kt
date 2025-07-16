@@ -16,9 +16,9 @@ data class PathWrapper(val path: Path) : Comparable<PathWrapper> {
 
     val isDir = path.isDirectory()
 
-    val time = path.getLastModifiedTime().toInstant()
-
     val size = path.fileSize()
+
+    val time = path.getLastModifiedTime().toInstant()
 
     val timeFormatted = timeFormatter.format(time)
 

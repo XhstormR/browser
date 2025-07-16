@@ -28,5 +28,5 @@ java -jar browser-2.0-SNAPSHOT.jar -P:resource.location=/Users/user/Downloads
 
 * `security.username`: 登录用户，默认 `admin`
 * `security.password`: 登录密码，默认 `123456`
-* `resource.location`: 索引目录，默认 `/Users/user/Downloads`
+* `resource.location`: 索引目录，默认 `.`
 * `resource.enableUpload`: 上传功能，默认 `true`

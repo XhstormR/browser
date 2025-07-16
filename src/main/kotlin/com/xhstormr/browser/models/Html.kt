@@ -137,7 +137,7 @@ fun HTML.createBrowserHtml(
     }
 }
 
-fun breadcrumbs(key: Path): List<Breadcrumb> {
+private fun breadcrumbs(key: Path): List<Breadcrumb> {
     if (key.name.isEmpty()) return listOf()
 
     val list = mutableListOf<Breadcrumb>()
@@ -148,6 +148,11 @@ fun breadcrumbs(key: Path): List<Breadcrumb> {
     }
     return list.reversed()
 }
+
+private data class Breadcrumb(
+    val link: String,
+    val text: String,
+)
 
 private const val BASE_HREF = "/browser?key=/"
 
