@@ -3,7 +3,6 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 version = "2.0-SNAPSHOT"
 
 plugins {
-    idea
     application
     val kotlinVersion = libs.versions.kotlin
     kotlin("jvm") version kotlinVersion
@@ -30,7 +29,6 @@ graalvmNative {
 
 dependencies {
     implementation(libs.bundles.ktor)
-
     implementation(libs.logback.classic)
 }
 
@@ -41,7 +39,7 @@ tasks {
 
     withType<KotlinCompile> {
         compilerOptions {
-            freeCompilerArgs = listOf("-Xjsr305=strict", "-Xjvm-default=all")
+            freeCompilerArgs = listOf("-Xjsr305=strict")
         }
     }
 
