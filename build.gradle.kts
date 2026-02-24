@@ -22,7 +22,17 @@ graalvmNative {
         enabled = true
     }
 
+    agent {
+        enabled = true
+        metadataCopy {
+            mergeWithExisting = true
+            inputTaskNames.add("run")
+            outputDirectories.add("src/main/resources/META-INF/native-image/com.xhstormr.browser")
+        }
+    }
+
     binaries.all {
+        verbose = true
         resources.autodetect()
     }
 }

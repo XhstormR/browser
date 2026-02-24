@@ -1,4 +1,4 @@
-package com.xhstormr.browser.plugins
+package com.xhstormr.browser.plugin
 
 import io.ktor.server.application.Application
 import io.ktor.server.application.install

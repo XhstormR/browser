@@ -1,4 +1,4 @@
-package com.xhstormr.browser.models
+package com.xhstormr.browser.model
 
 import kotlinx.serialization.Serializable
 

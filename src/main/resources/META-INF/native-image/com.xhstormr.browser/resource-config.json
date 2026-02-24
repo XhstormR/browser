@@ -1,0 +1,35 @@
+{
+  "resources": {
+    "includes": [
+      {
+        "pattern": "\\QMETA-INF/browser.kotlin_module\\E"
+      },
+      {
+        "pattern": "\\Qapplication.yaml\\E"
+      },
+      {
+        "pattern": "\\Qlogback.xml\\E"
+      },
+      {
+        "pattern": "\\Qpublic/favicon.ico\\E"
+      },
+      {
+        "pattern": "\\Qpublic/login.html\\E"
+      },
+      {
+        "pattern": "\\Qpublic/css/main.css\\E"
+      },
+      {
+        "pattern": "\\Qpublic/images/main.jpg\\E"
+      },
+      {
+        "pattern": "\\Qpublic/images/main.svg\\E"
+      },
+      {
+        "pattern": "\\Qpublic/js/main.js\\E"
+      }
+    ],
+    "excludes": []
+  },
+  "bundles": []
+}

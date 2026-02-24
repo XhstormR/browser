@@ -1,0 +1,1120 @@
+{
+  "reflection": [
+    {
+      "type": "android.os.Build$VERSION"
+    },
+    {
+      "type": "ch.qos.logback.classic.encoder.PatternLayoutEncoder",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "ch.qos.logback.classic.joran.SerializedModelConfigurator",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "ch.qos.logback.classic.pattern.DateConverter",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "ch.qos.logback.classic.pattern.LevelConverter",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "ch.qos.logback.classic.pattern.LineSeparatorConverter",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "ch.qos.logback.classic.pattern.LoggerConverter",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "ch.qos.logback.classic.pattern.MessageConverter",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "ch.qos.logback.classic.pattern.ThreadConverter",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "ch.qos.logback.classic.spi.LogbackServiceProvider"
+    },
+    {
+      "type": "ch.qos.logback.classic.util.DefaultJoranConfigurator",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "ch.qos.logback.core.ConsoleAppender",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "ch.qos.logback.core.OutputStreamAppender",
+      "methods": [
+        {
+          "name": "setEncoder",
+          "parameterTypes": [
+            "ch.qos.logback.core.encoder.Encoder"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ch.qos.logback.core.encoder.Encoder",
+      "methods": [
+        {
+          "name": "valueOf",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ch.qos.logback.core.encoder.LayoutWrappingEncoder",
+      "methods": [
+        {
+          "name": "setParent",
+          "parameterTypes": [
+            "ch.qos.logback.core.spi.ContextAware"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ch.qos.logback.core.pattern.PatternLayoutEncoderBase",
+      "methods": [
+        {
+          "name": "setPattern",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ch.qos.logback.core.spi.ContextAware",
+      "methods": [
+        {
+          "name": "valueOf",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.xhstormr.browser.ApplicationKt",
+      "methods": [
+        {
+          "name": "main",
+          "parameterTypes": [
+            "java.lang.String[]"
+          ]
+        },
+        {
+          "name": "module",
+          "parameterTypes": [
+            "io.ktor.server.application.Application"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "com.xhstormr.browser.config.ResourceConfig",
+      "fields": [
+        {
+          "name": "Companion"
+        }
+      ]
+    },
+    {
+      "type": "com.xhstormr.browser.config.ResourceConfig$Companion",
+      "methods": [
+        {
+          "name": "serializer",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.xhstormr.browser.config.SecurityConfig",
+      "fields": [
+        {
+          "name": "Companion"
+        }
+      ]
+    },
+    {
+      "type": "com.xhstormr.browser.config.SecurityConfig$Companion",
+      "methods": [
+        {
+          "name": "serializer",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.xhstormr.browser.model.UserSession",
+      "fields": [
+        {
+          "name": "Companion"
+        }
+      ]
+    },
+    {
+      "type": "com.xhstormr.browser.model.UserSession$Companion",
+      "methods": [
+        {
+          "name": "serializer",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.ktor.http.HttpStatusCode"
+    },
+    {
+      "type": "io.ktor.http.Parameters"
+    },
+    {
+      "type": "io.ktor.http.content.OutgoingContent"
+    },
+    {
+      "type": "io.ktor.http.content.OutgoingContent$ReadChannelContent"
+    },
+    {
+      "type": "io.ktor.http.content.TextContent"
+    },
+    {
+      "type": "io.ktor.http.content.Version"
+    },
+    {
+      "type": "io.ktor.network.selector.InterestSuspensionsMap",
+      "fields": [
+        {
+          "name": "acceptHandlerReference"
+        },
+        {
+          "name": "connectHandlerReference"
+        },
+        {
+          "name": "readHandlerReference"
+        },
+        {
+          "name": "writeHandlerReference"
+        }
+      ]
+    },
+    {
+      "type": "io.ktor.network.selector.LockFreeMPSCQueue",
+      "fields": [
+        {
+          "name": "_cur"
+        }
+      ]
+    },
+    {
+      "type": "io.ktor.network.selector.LockFreeMPSCQueueCore",
+      "fields": [
+        {
+          "name": "_next"
+        },
+        {
+          "name": "_state"
+        }
+      ]
+    },
+    {
+      "type": "io.ktor.network.selector.SelectInterest[]"
+    },
+    {
+      "type": "io.ktor.network.selector.SelectableBase",
+      "fields": [
+        {
+          "name": "_interestedOps"
+        }
+      ]
+    },
+    {
+      "type": "io.ktor.network.sockets.SocketBase"
+    },
+    {
+      "type": "io.ktor.resources.Resources"
+    },
+    {
+      "type": "io.ktor.server.application.Application"
+    },
+    {
+      "type": "io.ktor.server.application.PluginInstance"
+    },
+    {
+      "type": "io.ktor.server.auth.AuthenticateProvidersRegistration"
+    },
+    {
+      "type": "io.ktor.server.auth.Authentication"
+    },
+    {
+      "type": "io.ktor.server.auth.AuthenticationContext"
+    },
+    {
+      "type": "io.ktor.server.auth.Principal"
+    },
+    {
+      "type": "io.ktor.server.auth.UnauthorizedResponse"
+    },
+    {
+      "type": "io.ktor.server.auth.UserIdPrincipal",
+      "methods": [
+        {
+          "name": "getName",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.ktor.server.cio.internal.WeakTimeoutQueue$WeakTimeoutCoroutine",
+      "fields": [
+        {
+          "name": "state"
+        }
+      ]
+    },
+    {
+      "type": "io.ktor.server.config.HoconConfigLoader"
+    },
+    {
+      "type": "io.ktor.server.config.yaml.YamlConfigLoader"
+    },
+    {
+      "type": "io.ktor.server.engine.BaseApplicationResponse"
+    },
+    {
+      "type": "io.ktor.server.http.content.CompressedFileType"
+    },
+    {
+      "type": "io.ktor.server.http.content.LocalPathContent"
+    },
+    {
+      "type": "io.ktor.server.plugins.MutableOriginConnectionPoint"
+    },
+    {
+      "type": "io.ktor.server.plugins.calllogging.KtorMDCProvider"
+    },
+    {
+      "type": "io.ktor.server.request.DoubleReceivePreventionToken"
+    },
+    {
+      "type": "io.ktor.server.routing.RoutingCall"
+    },
+    {
+      "type": "io.ktor.server.routing.RoutingRoot"
+    },
+    {
+      "type": "io.ktor.server.sessions.SessionProvider"
+    },
+    {
+      "type": "io.ktor.server.sessions.StatefulSession"
+    },
+    {
+      "type": "io.ktor.util.Attributes"
+    },
+    {
+      "type": "io.ktor.util.collections.CopyOnWriteHashMap",
+      "fields": [
+        {
+          "name": "current"
+        }
+      ]
+    },
+    {
+      "type": "io.ktor.util.internal.LockFreeLinkedListNode",
+      "fields": [
+        {
+          "name": "_next"
+        },
+        {
+          "name": "_prev"
+        },
+        {
+          "name": "_removedRef"
+        }
+      ]
+    },
+    {
+      "type": "io.ktor.util.reflect.TypeInfo"
+    },
+    {
+      "type": "io.ktor.utils.io.ByteBufferChannel",
+      "fields": [
+        {
+          "name": "_closed"
+        },
+        {
+          "name": "_readOp"
+        },
+        {
+          "name": "_state"
+        },
+        {
+          "name": "_writeOp"
+        }
+      ]
+    },
+    {
+      "type": "io.ktor.utils.io.ByteChannel"
+    },
+    {
+      "type": "io.ktor.utils.io.core.internal.ChunkBuffer",
+      "fields": [
+        {
+          "name": "nextRef"
+        },
+        {
+          "name": "refCount"
+        }
+      ]
+    },
+    {
+      "type": "io.ktor.utils.io.internal.CancellableReusableContinuation",
+      "fields": [
+        {
+          "name": "jobCancellationHandler"
+        },
+        {
+          "name": "state"
+        }
+      ]
+    },
+    {
+      "type": "io.ktor.utils.io.internal.JoiningState",
+      "fields": [
+        {
+          "name": "_closeWaitJob"
+        }
+      ]
+    },
+    {
+      "type": "io.ktor.utils.io.internal.RingBufferCapacity",
+      "fields": [
+        {
+          "name": "_availableForRead$internal"
+        },
+        {
+          "name": "_availableForWrite$internal"
+        },
+        {
+          "name": "_pendingToFlush"
+        }
+      ]
+    },
+    {
+      "type": "io.ktor.utils.io.pool.DefaultPool",
+      "fields": [
+        {
+          "name": "top"
+        }
+      ]
+    },
+    {
+      "type": "java.io.File"
+    },
+    {
+      "type": "java.io.FilePermission"
+    },
+    {
+      "type": "java.io.Serializable"
+    },
+    {
+      "type": "java.lang.Boolean",
+      "jniAccessible": true,
+      "methods": [
+        {
+          "name": "getBoolean",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.lang.Class",
+      "methods": [
+        {
+          "name": "isSealed",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "java.lang.ClassValue"
+    },
+    {
+      "type": "java.lang.Object"
+    },
+    {
+      "type": "java.lang.RuntimePermission"
+    },
+    {
+      "type": "java.lang.String"
+    },
+    {
+      "type": "java.lang.String[]"
+    },
+    {
+      "type": "java.net.NetPermission"
+    },
+    {
+      "type": "java.net.SocketPermission"
+    },
+    {
+      "type": "java.net.StandardSocketOptions"
+    },
+    {
+      "type": "java.net.URLPermission",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.String",
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.security.AllPermission"
+    },
+    {
+      "type": "java.security.SecureRandomParameters"
+    },
+    {
+      "type": "java.security.SecurityPermission"
+    },
+    {
+      "type": "java.util.PropertyPermission"
+    },
+    {
+      "type": "java.util.concurrent.atomic.AtomicBoolean",
+      "fields": [
+        {
+          "name": "value"
+        }
+      ]
+    },
+    {
+      "type": "java.util.concurrent.atomic.AtomicReference",
+      "fields": [
+        {
+          "name": "value"
+        }
+      ]
+    },
+    {
+      "type": "javax.smartcardio.CardPermission"
+    },
+    {
+      "type": "kotlin.Any"
+    },
+    {
+      "type": "kotlin.Array"
+    },
+    {
+      "type": "kotlin.Boolean"
+    },
+    {
+      "type": "kotlin.ByteArray"
+    },
+    {
+      "type": "kotlin.Cloneable"
+    },
+    {
+      "type": "kotlin.Function0"
+    },
+    {
+      "type": "kotlin.Int"
+    },
+    {
+      "type": "kotlin.Long"
+    },
+    {
+      "type": "kotlin.Metadata",
+      "methods": [
+        {
+          "name": "bv",
+          "parameterTypes": []
+        },
+        {
+          "name": "d1",
+          "parameterTypes": []
+        },
+        {
+          "name": "d2",
+          "parameterTypes": []
+        },
+        {
+          "name": "k",
+          "parameterTypes": []
+        },
+        {
+          "name": "mv",
+          "parameterTypes": []
+        },
+        {
+          "name": "pn",
+          "parameterTypes": []
+        },
+        {
+          "name": "xi",
+          "parameterTypes": []
+        },
+        {
+          "name": "xs",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "kotlin.SafePublicationLazyImpl",
+      "fields": [
+        {
+          "name": "_value"
+        }
+      ]
+    },
+    {
+      "type": "kotlin.String"
+    },
+    {
+      "type": "kotlin.Unit"
+    },
+    {
+      "type": "kotlin.collections.List"
+    },
+    {
+      "type": "kotlin.collections.Map"
+    },
+    {
+      "type": "kotlin.jvm.internal.DefaultConstructorMarker"
+    },
+    {
+      "type": "kotlin.reflect.jvm.internal.ReflectionFactoryImpl",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "kotlin.reflect.jvm.internal.impl.km.jvm.internal.JvmMetadataExtensions"
+    },
+    {
+      "type": "kotlin.reflect.jvm.internal.impl.load.java.ErasedOverridabilityCondition"
+    },
+    {
+      "type": "kotlin.reflect.jvm.internal.impl.load.java.FieldOverridabilityCondition"
+    },
+    {
+      "type": "kotlin.reflect.jvm.internal.impl.load.java.JavaIncompatibilityRulesOverridabilityCondition"
+    },
+    {
+      "type": "kotlin.reflect.jvm.internal.impl.resolve.scopes.DescriptorKindFilter",
+      "allPublicFields": true
+    },
+    {
+      "type": "kotlinx.coroutines.CancellableContinuationImpl",
+      "fields": [
+        {
+          "name": "_decisionAndIndex"
+        },
+        {
+          "name": "_parentHandle"
+        },
+        {
+          "name": "_state"
+        }
+      ]
+    },
+    {
+      "type": "kotlinx.coroutines.CancelledContinuation",
+      "fields": [
+        {
+          "name": "_resumed"
+        }
+      ]
+    },
+    {
+      "type": "kotlinx.coroutines.CompletedExceptionally",
+      "fields": [
+        {
+          "name": "_handled"
+        }
+      ]
+    },
+    {
+      "type": "kotlinx.coroutines.DispatchedCoroutine",
+      "fields": [
+        {
+          "name": "_decision"
+        }
+      ]
+    },
+    {
+      "type": "kotlinx.coroutines.EventLoopImplBase",
+      "fields": [
+        {
+          "name": "_delayed"
+        },
+        {
+          "name": "_isCompleted"
+        },
+        {
+          "name": "_queue"
+        }
+      ]
+    },
+    {
+      "type": "kotlinx.coroutines.InvokeOnCancelling",
+      "fields": [
+        {
+          "name": "_invoked"
+        }
+      ]
+    },
+    {
+      "type": "kotlinx.coroutines.JobSupport",
+      "fields": [
+        {
+          "name": "_parentHandle"
+        },
+        {
+          "name": "_state"
+        }
+      ]
+    },
+    {
+      "type": "kotlinx.coroutines.JobSupport$Finishing",
+      "fields": [
+        {
+          "name": "_exceptionsHolder"
+        },
+        {
+          "name": "_isCompleting"
+        },
+        {
+          "name": "_rootCause"
+        }
+      ]
+    },
+    {
+      "type": "kotlinx.coroutines.channels.BufferedChannel",
+      "fields": [
+        {
+          "name": "_closeCause"
+        },
+        {
+          "name": "bufferEnd"
+        },
+        {
+          "name": "bufferEndSegment"
+        },
+        {
+          "name": "closeHandler"
+        },
+        {
+          "name": "completedExpandBuffersAndPauseFlag"
+        },
+        {
+          "name": "receiveSegment"
+        },
+        {
+          "name": "receivers"
+        },
+        {
+          "name": "sendSegment"
+        },
+        {
+          "name": "sendersAndCloseStatus"
+        }
+      ]
+    },
+    {
+      "type": "kotlinx.coroutines.internal.AtomicOp",
+      "fields": [
+        {
+          "name": "_consensus"
+        }
+      ]
+    },
+    {
+      "type": "kotlinx.coroutines.internal.ConcurrentLinkedListNode",
+      "fields": [
+        {
+          "name": "_next"
+        },
+        {
+          "name": "_prev"
+        }
+      ]
+    },
+    {
+      "type": "kotlinx.coroutines.internal.DispatchedContinuation",
+      "fields": [
+        {
+          "name": "_reusableCancellableContinuation"
+        }
+      ]
+    },
+    {
+      "type": "kotlinx.coroutines.internal.LimitedDispatcher",
+      "fields": [
+        {
+          "name": "runningWorkers"
+        }
+      ]
+    },
+    {
+      "type": "kotlinx.coroutines.internal.LockFreeLinkedListNode",
+      "fields": [
+        {
+          "name": "_next"
+        },
+        {
+          "name": "_prev"
+        },
+        {
+          "name": "_removedRef"
+        }
+      ]
+    },
+    {
+      "type": "kotlinx.coroutines.internal.LockFreeTaskQueue",
+      "fields": [
+        {
+          "name": "_cur"
+        }
+      ]
+    },
+    {
+      "type": "kotlinx.coroutines.internal.LockFreeTaskQueueCore",
+      "fields": [
+        {
+          "name": "_next"
+        },
+        {
+          "name": "_state"
+        }
+      ]
+    },
+    {
+      "type": "kotlinx.coroutines.internal.Segment",
+      "fields": [
+        {
+          "name": "cleanedAndPointers"
+        }
+      ]
+    },
+    {
+      "type": "kotlinx.coroutines.internal.ThreadSafeHeap",
+      "fields": [
+        {
+          "name": "_size"
+        }
+      ]
+    },
+    {
+      "type": "kotlinx.coroutines.scheduling.CoroutineScheduler",
+      "fields": [
+        {
+          "name": "_isTerminated"
+        },
+        {
+          "name": "controlState"
+        },
+        {
+          "name": "parkedWorkersStack"
+        }
+      ]
+    },
+    {
+      "type": "kotlinx.coroutines.scheduling.CoroutineScheduler$Worker",
+      "fields": [
+        {
+          "name": "workerCtl"
+        }
+      ]
+    },
+    {
+      "type": "kotlinx.coroutines.scheduling.WorkQueue",
+      "fields": [
+        {
+          "name": "blockingTasksInBuffer"
+        },
+        {
+          "name": "consumerIndex"
+        },
+        {
+          "name": "lastScheduledTask"
+        },
+        {
+          "name": "producerIndex"
+        }
+      ]
+    },
+    {
+      "type": "org.fusesource.jansi.internal.CLibrary",
+      "jniAccessible": true,
+      "fields": [
+        {
+          "name": "HAVE_ISATTY"
+        },
+        {
+          "name": "HAVE_TTYNAME"
+        },
+        {
+          "name": "TCSADRAIN"
+        },
+        {
+          "name": "TCSAFLUSH"
+        },
+        {
+          "name": "TCSANOW"
+        },
+        {
+          "name": "TIOCGETA"
+        },
+        {
+          "name": "TIOCGETD"
+        },
+        {
+          "name": "TIOCGWINSZ"
+        },
+        {
+          "name": "TIOCSETA"
+        },
+        {
+          "name": "TIOCSETD"
+        },
+        {
+          "name": "TIOCSWINSZ"
+        }
+      ]
+    },
+    {
+      "type": "sun.management.VMManagementImpl",
+      "jniAccessible": true,
+      "fields": [
+        {
+          "name": "compTimeMonitoringSupport"
+        },
+        {
+          "name": "currentThreadCpuTimeSupport"
+        },
+        {
+          "name": "objectMonitorUsageSupport"
+        },
+        {
+          "name": "otherThreadCpuTimeSupport"
+        },
+        {
+          "name": "remoteDiagnosticCommandsSupport"
+        },
+        {
+          "name": "synchronizerUsageSupport"
+        },
+        {
+          "name": "threadAllocatedMemorySupport"
+        },
+        {
+          "name": "threadContentionMonitoringSupport"
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.NativePRNG$NonBlocking",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        },
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.security.SecureRandomParameters"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.SHA",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.SecureRandom",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        },
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.security.SecureRandomParameters"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.text.resources.cldr.FormatData"
+    },
+    {
+      "type": "sun.util.resources.cldr.CalendarData"
+    }
+  ],
+  "resources": [
+    {
+      "glob": "META-INF/browser.kotlin_module"
+    },
+    {
+      "glob": "META-INF/services/ch.qos.logback.classic.spi.Configurator"
+    },
+    {
+      "glob": "META-INF/services/io.ktor.server.application.ModuleParametersInjector"
+    },
+    {
+      "glob": "META-INF/services/io.ktor.server.config.ConfigLoader"
+    },
+    {
+      "glob": "META-INF/services/java.nio.channels.spi.SelectorProvider"
+    },
+    {
+      "glob": "META-INF/services/java.time.zone.ZoneRulesProvider"
+    },
+    {
+      "glob": "META-INF/services/javax.xml.parsers.SAXParserFactory"
+    },
+    {
+      "glob": "META-INF/services/kotlin.reflect.jvm.internal.impl.km.internal.extensions.MetadataExtensions"
+    },
+    {
+      "glob": "META-INF/services/kotlin.reflect.jvm.internal.impl.resolve.ExternalOverridabilityCondition"
+    },
+    {
+      "glob": "META-INF/services/kotlin.reflect.jvm.internal.impl.util.ModuleVisibilityHelper"
+    },
+    {
+      "glob": "META-INF/services/org.slf4j.spi.SLF4JServiceProvider"
+    },
+    {
+      "glob": "application.yaml"
+    },
+    {
+      "glob": "ch/qos/logback/classic/logback-classic-version.properties"
+    },
+    {
+      "glob": "ch/qos/logback/core/logback-core-version.properties"
+    },
+    {
+      "glob": "kotlin/collections/collections.kotlin_builtins"
+    },
+    {
+      "glob": "kotlin/kotlin.kotlin_builtins"
+    },
+    {
+      "glob": "logback-test.xml"
+    },
+    {
+      "glob": "logback.xml"
+    },
+    {
+      "glob": "org/fusesource/jansi/internal/native/Mac/x86_64/libjansi.jnilib"
+    },
+    {
+      "glob": "org/fusesource/jansi/jansi.properties"
+    },
+    {
+      "glob": "public"
+    },
+    {
+      "glob": "public/css/main.css"
+    },
+    {
+      "glob": "public/favicon.ico"
+    },
+    {
+      "glob": "public/images/main.jpg"
+    },
+    {
+      "glob": "public/images/main.svg"
+    },
+    {
+      "glob": "public/js/main.js"
+    },
+    {
+      "glob": "public/login.html"
+    }
+  ]
+}

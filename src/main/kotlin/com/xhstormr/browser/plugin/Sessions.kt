@@ -1,6 +1,6 @@
-package com.xhstormr.browser.plugins
+package com.xhstormr.browser.plugin
 
-import com.xhstormr.browser.models.UserSession
+import com.xhstormr.browser.model.UserSession
 import io.ktor.server.application.Application
 import io.ktor.server.application.install
 import io.ktor.server.sessions.SessionStorageMemory

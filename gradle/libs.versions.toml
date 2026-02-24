@@ -9,6 +9,7 @@ native = "0.11.4"
 [libraries]
 ktor-server-cio = { module = "io.ktor:ktor-server-cio" }
 ktor-server-auth = { module = "io.ktor:ktor-server-auth" }
+ktor-server-resources = { module = "io.ktor:ktor-server-resources" }
 ktor-server-config-yaml = { module = "io.ktor:ktor-server-config-yaml" }
 ktor-server-html-builder = { module = "io.ktor:ktor-server-html-builder" }
 ktor-server-status-pages = { module = "io.ktor:ktor-server-status-pages" }
@@ -23,6 +24,7 @@ logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "la
 ktor = [
     "ktor-server-cio",
     "ktor-server-auth",
+    "ktor-server-resources",
     "ktor-server-config-yaml",
     "ktor-server-html-builder",
     "ktor-server-status-pages",

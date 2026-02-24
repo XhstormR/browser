@@ -1,5 +1,6 @@
-package com.xhstormr.browser.models
+package com.xhstormr.browser.view
 
+import com.xhstormr.browser.model.PathEntry
 import kotlinx.html.FormEncType
 import kotlinx.html.HTML
 import kotlinx.html.a
@@ -42,7 +43,7 @@ fun HTML.createBrowserHtml(
 ) {
     val breadcrumbs = breadcrumbs(key)
     val items = path.listDirectoryEntries()
-        .map { PathWrapper(it) }
+        .map { PathEntry(it) }
         .sorted()
 
     head {

@@ -1,12 +1,12 @@
 package com.xhstormr.browser
 
-import com.xhstormr.browser.plugins.configureAttachment
-import com.xhstormr.browser.plugins.configureAuthentication
-import com.xhstormr.browser.plugins.configureCallLogging
-import com.xhstormr.browser.plugins.configureForwardedHeaders
-import com.xhstormr.browser.plugins.configureRouting
-import com.xhstormr.browser.plugins.configureSessions
-import com.xhstormr.browser.plugins.configureStatusPages
+import com.xhstormr.browser.plugin.configureAttachment
+import com.xhstormr.browser.plugin.configureAuthentication
+import com.xhstormr.browser.plugin.configureCallLogging
+import com.xhstormr.browser.plugin.configureForwardedHeaders
+import com.xhstormr.browser.plugin.configureRouting
+import com.xhstormr.browser.plugin.configureSessions
+import com.xhstormr.browser.plugin.configureStatusPages
 import io.ktor.server.application.Application
 import io.ktor.server.cio.EngineMain
 
