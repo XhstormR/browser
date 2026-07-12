@@ -72,7 +72,7 @@ fun Route.browserRoutes(location: Path, enableUpload: Boolean) {
                     log.info("upload: {}", dest.toUri())
                     part.provider().copyAndClose(dest.outputStream().asByteWriteChannel())
                 }
-                part.dispose()
+                part.release()
             }
             call.respondRedirect(call.request.uri)
         }
